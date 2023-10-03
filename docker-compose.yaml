@@ -1,7 +1,7 @@
-version: '3.8'
+version: '3.9'
 
 networks:
-  lfs261:
+  local_jenkins:
     driver: bridge
 
 volumes:
@@ -10,7 +10,7 @@ volumes:
 
 services:
   jenkins:
-    image: jenkins/jenkins:2.375-jdk11
+    container_name: jenkins-server
     build:
       context: .
       dockerfile: Dockerfile
@@ -22,7 +22,7 @@ services:
       - DOCKER_CERT_PATH=/certs/client
       - DOCKER_TLS_VERIFY=1
     networks:
-      - lfs261
+      - local_jenkins
     hostname: jenkins
     restart: always
     volumes:
@@ -32,6 +32,7 @@ services:
       - docker
 
   docker:
+    container_name: docker
     image: docker:dind
     ports:
       - 2376:2376
@@ -40,7 +41,7 @@ services:
     environment:
       - DOCKER_TLS_CERTDIR=/certs
     networks:
-      - lfs261
+      - local_jenkins
     privileged: true
     hostname: docker
     restart: always
