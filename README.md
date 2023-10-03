@@ -15,7 +15,7 @@ Deploy a Jenkins server with Docker containers<br/>
 
 # Dockerfile
 
-To deploy the Jenkins server, we build an image from => Jenkins2.375
+To deploy the Jenkins server, we build an image from => Jenkins2.375<br/>
 Just install inside, the Docker CLI, Docker compose and BlueOcean plugin from Jenkins to show graphical interface for pipelines.
 
 We build the Dockerfile directly from Docker-compose.yml, but you can also build with GitHub actions, Push image on DockerHub and Pull it from the Docker compose file.
