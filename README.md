@@ -7,10 +7,10 @@
 
 </div>
 <div align="center">
-Déploiement d'un serveur Jenkins avec Docker<br/>
-+ Création d'un Pipeline CI/CD 
+Deploy a Jenkins server in Docker container<br/>
++ Create a CI/CD pipeline
 
-![project](https://user-images.githubusercontent.com/18481009/84582395-ba230b00-adeb-11ea-9453-22ed1be7e268.jpg)
+![project](https://github.com/Tony-Dja/Jenkins_CI-CD_in_Docker/blob/70fafb0b03686fa3c5a4bc7630d4aedd708d3ca9/screenshots/jenkins-docker.png)
 </div>
 
 # Application
