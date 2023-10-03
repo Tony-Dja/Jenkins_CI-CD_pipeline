@@ -13,21 +13,38 @@ Deploy a Jenkins server with Docker containers<br/>
 ![project](https://github.com/Tony-Dja/Jenkins_CI-CD_in_Docker/blob/70fafb0b03686fa3c5a4bc7630d4aedd708d3ca9/screenshots/jenkins-docker.png)
 </div>
 
-# Application
+# Dockerfile
 
-L'application permet d'afficher sur une page web, une liste d'étudiants avec leur nom et age.
-Les données sont stockées dans un fichier JSON.
-Une API permet de renvoyer les données JSON au frontend.
+To deploy the Jenkins server, we build an image from => Jenkins2.375
+Just install inside, the Docker CLI, Docker compose and BlueOcean plugin from Jenkins to show graphical interface for pipelines.
 
-<strong>Elle est composée de 2 modules :</strong>
+We build the Dockerfile directly from Docker-compose.yml, but you can also build with GitHub actions, Push image on DockerHub and Pull it from the Docker compose file.
 
-1. API REST => renvoi une liste d'étudiants à partir d'un fichier JSON (authentification requise)
-2. Web APP => une page PHP permettant d'afficher la liste des étudiants
+```
+FROM jenkins/jenkins:2.375-jdk11
 
-Chaque module est conteneurisé puis déployé en local avec le docker-compose.yml
+USER root
 
-L'API est accessible via cette URL :
-http://<api_ip_or_name:port>/pozos/api/v1.0/get_student_ages
+RUN apt-get update && apt-get install -y apt-transport-https \
+       ca-certificates curl gnupg2 \
+       software-properties-common
+
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
+
+RUN apt-key fingerprint 0EBFCD88
+
+RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable"
+
+RUN apt-get update && apt-get install -y docker-ce-cli
+
+RUN curl -L "https://github.com/docker/compose/releases/download/`curl -fsSLI -o /dev/null -w %{url_effective} https://github.com/docker/compose/releases/latest | sed 's#.*tag/##g' && echo`/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \ 
+    chmod +x /usr/local/bin/docker-compose && \ 
+    ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+USER jenkins
+
+RUN jenkins-plugin-cli --plugins blueocean
+```
 
 
 # Fichiers
