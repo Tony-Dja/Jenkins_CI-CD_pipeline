@@ -148,7 +148,7 @@ Click on checkbox "Build with parameters", and add 2 variables with string type 
 
 ![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string1.png)
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/latest.png)
 
 
 From the Build Steps section, select "execute shell script"
@@ -173,12 +173,12 @@ To run pipeline, click on "Build with parameters" and "Build"
 
 The job is running, you can watch job in progress 
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/logs.png)
 
 
 The job is finished
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/build.png)
 
 
 
@@ -188,9 +188,9 @@ The job is finished
 In the Dockerfile, we install Blue Ocean plugin. It allows to visualize a graphic interface for our pipeline.<br/>
 you can find the link in Jenkins navigation menu 
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/menu.png)
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/blueocean.png)
 
 
 
