@@ -88,7 +88,7 @@ Check the containers running :
 ```
 docker ps
 ```
-![screen](https://github.com/Tony-Dja/Docker-API-webapp/blob/e12bb5924d71eef708ffdec59bfae04766c943ea/screenshots/build-api-service.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/679cf211c27019b0729d866204757bb8b4718964/screenshots/docker-ps.png)
 
 
 Now to display the Jenkins server on your browser :
@@ -97,7 +97,23 @@ Now to display the Jenkins server on your browser :
 http://localhost:8080
 ```
 
-![screen](https://github.com/Tony-Dja/Docker-API-webapp/blob/e12bb5924d71eef708ffdec59bfae04766c943ea/screenshots/build-api-service.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/679cf211c27019b0729d866204757bb8b4718964/screenshots/first.png)
+
+
+For the first start you have to retrieve the initial password generate by Jenkins.<br/>
+To do that you must connecting on the jenkins-server container and display the password file.
+
+```
+docker exec -it jenkins-server /bin/bash
+```
+
+in the container :
+
+```
+cat /var/jenkins_home/secrets/initialAdminPassword 
+```
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/679cf211c27019b0729d866204757bb8b4718964/screenshots/first.png)
 
 
 
