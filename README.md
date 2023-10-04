@@ -1,7 +1,7 @@
 
 <div align="center">
 
-![Docker Build](https://img.shields.io/badge/docker-build-green)       ![Docker Build](https://img.shields.io/badge/dockercompose-up-green)            
+![Docker Build](https://img.shields.io/badge/docker-build-green)       ![Docker Build](https://img.shields.io/badge/dockercompose-up-green)            ![example workflow](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/actions/workflows/github-ci.yml/badge.svg)         
 
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white)         ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)                ![Docker](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)         
 
