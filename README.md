@@ -125,7 +125,7 @@ It' OK, so now create a user and confirm the IP address with the open port.
 
 
 
-# Create project
+# Create Jenkins project
 
 We are going to create a Jenkins pipeline to Build a simple HTML5 website.
 You can use my repository or take yours.
@@ -137,7 +137,7 @@ https://github.com/Tony-Dja/Docker-contenerized-website
 
 Enter a name for your project
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/project.png)
 
 
 Click on checkbox "Build with parameters", and add 2 variables with string type :
@@ -146,19 +146,19 @@ Click on checkbox "Build with parameters", and add 2 variables with string type 
       - IMAGE_TAG => Tag of the image
 
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string1.png)
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/string2.png)
 
 
 From the Build Steps section, select "execute shell script"
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/shell.png)
 
 
 Add script to clone the repo, and run Docker Build command :
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/script.png)
 
 
 
