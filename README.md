@@ -48,7 +48,7 @@ RUN jenkins-plugin-cli --plugins blueocean
 ```
 
 
-# Docker compose
+# Deploy containers
 
 To run containers just execute the following command :
 
@@ -102,18 +102,22 @@ http://localhost:8080
 
 For the first start you have to retrieve the initial password generate by Jenkins.<br/>
 To do that you must connecting on the jenkins-server container and display the password file.
+Then enter the password and validate.
 
 ```
 docker exec -it jenkins-server /bin/bash
 ```
 
-in the container :
+inside the container :
 
 ```
 cat /var/jenkins_home/secrets/initialAdminPassword 
 ```
 
 ![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/944cb13af42eac81d10ddbc4ad488fad5fb15c6f/screenshots/initialpassword.png)
+
+
+It' OK, so now create a user and confirm the IP address with the open port.
 
 
 
