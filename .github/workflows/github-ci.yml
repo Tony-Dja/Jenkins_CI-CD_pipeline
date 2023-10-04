@@ -4,7 +4,7 @@ name: Jenkins Server > Build & Push
 # Trigger
 on:
   # Push ou Pull Request on @main
-  push:
+  pull_request:
     branches: [ main ] 
 
 # Start Jobs

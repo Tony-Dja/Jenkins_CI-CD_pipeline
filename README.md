@@ -113,7 +113,7 @@ in the container :
 cat /var/jenkins_home/secrets/initialAdminPassword 
 ```
 
-![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/679cf211c27019b0729d866204757bb8b4718964/screenshots/first.png)
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/944cb13af42eac81d10ddbc4ad488fad5fb15c6f/screenshots/initialpassword.png)
 
 
 
