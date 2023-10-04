@@ -47,7 +47,58 @@ RUN jenkins-plugin-cli --plugins blueocean
 ```
 
 
-# Fichiers
+# Docker compose
+
+To run containers just execute the following command :
+
+```
+docker compose up -d
+```
+
+The jenkins service is exposed on port 8080
+
+```
+services:
+  jenkins:
+    container_name: jenkins-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 50000:50000
+    environment:
+      - DOCKER_HOST=tcp://docker:2376
+      - DOCKER_CERT_PATH=/certs/client
+      - DOCKER_TLS_VERIFY=1
+    networks:
+      - local_jenkins
+    hostname: jenkins
+    restart: always
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - jenkins-docker-certs:/certs/client:ro
+    depends_on:
+      - docker
+```
+
+Check the containers running :
+
+```
+docker ps
+```
+![screen](https://github.com/Tony-Dja/Docker-API-webapp/blob/e12bb5924d71eef708ffdec59bfae04766c943ea/screenshots/build-api-service.png)
+
+
+Now to display the Jenkins server on your browser :
+
+```
+http://localhost:8080
+```
+
+![screen](https://github.com/Tony-Dja/Docker-API-webapp/blob/e12bb5924d71eef708ffdec59bfae04766c943ea/screenshots/build-api-service.png)
+
+
 
 - docker-compose.yml: déploiement de l'application (API et frontend)
 - Dockerfile: Conteneurisation de l'API Rest
