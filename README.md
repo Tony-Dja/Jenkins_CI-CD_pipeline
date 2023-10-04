@@ -119,13 +119,50 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 
 It' OK, so now create a user and confirm the IP address with the open port.
 
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/first-user.png)
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
 
 
-- docker-compose.yml: déploiement de l'application (API et frontend)
-- Dockerfile: Conteneurisation de l'API Rest
-- student_age.json: contient la liste des étudiants avec leur nom et age au format JSON
-- student_age.py: code source python de l'API
-- index.php: Page affichant le frontend et envoie la requête au backend
+
+# Create project
+
+We are going to create a Jenkins pipeline to Build a simple HTML5 website.
+You can use my repository or take yours.
+
+```
+https://github.com/Tony-Dja/Docker-contenerized-website
+```
+
+
+Enter a name for your project
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+
+
+Click on checkbox "Build with parameters", and add 2 variables with string type :
+
+      - IMAGE_NAME => name of Docker image you are going to build
+      - IMAGE_TAG => Tag of the image
+
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+
+
+From the Build Steps section, select "execute shell script"
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+
+
+Add script to clone the repo, and run Docker Build command :
+
+![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/9fa25e562d7ff12208cf3d6b45e0926afb985eb8/screenshots/confirm-ip.png)
+
+
+
+
 
 
 # Builder l'image
