@@ -156,6 +156,7 @@ From the Build Steps section, select "execute shell script"
 ![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/418a4415968e94efc1682b142679780c0bd98689/screenshots/shell.png)
 
 
+
 And last, add script to clone the repo, and Build image.
 Then validate project
 
@@ -186,7 +187,7 @@ The job is finished
 # Blue Ocean plugin
 
 In the Dockerfile, we install Blue Ocean plugin. It allows to visualize a graphic interface for our pipeline.<br/>
-you can find the link in Jenkins navigation menu 
+You can find the link in Jenkins navigation menu 
 
 ![screen](https://github.com/Tony-Dja/Jenkins_CI-CD_pipeline/blob/0f153d8e56582b232ef5915b16db386169765b3a/screenshots/menu.png)
 
